@@ -79,12 +79,11 @@ function tienenMismaLongitud(str1, str2) {
   // Devuelve "true" si las dos strings tienen la misma longitud
   // De lo contrario, devuelve "false"
   // Tu código:
-  if (str1.lenght==str2.lenght){
-  return true
+   return str1.length===str2.length;
+   
 }
-return false
-}
-tienenMismaLongitud (pato,pato);
+
+tienenMismaLongitud ('autos','pato');
 
 function menosQueNoventa(num) {
   // Devuelve "true" si el argumento de la función "num" es menor que noventa
@@ -150,7 +149,7 @@ elevarAlCuadrado (2);
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  var Cubo = math.pow(num,3);
+  var Cubo = Math.pow(num,3);
   return Cubo
 }
 elevarAlCubo (3);
@@ -158,7 +157,7 @@ elevarAlCubo (3);
 function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
-  var Exponente= math.pow(num,exponent);
+  var Exponente= Math.pow(num,exponent);
   return Exponente
 }
 elevar(2,2)
@@ -167,7 +166,7 @@ elevar(2,2)
 function redondearNumero(num) {
   // Redondea "num" al entero más próximo y devuélvelo
   // Tu código:
-  var Entero= math.round(num);
+  var Entero= Math.round(num);
   return Entero
 }
 redondearNumero(6.5);
@@ -175,7 +174,7 @@ redondearNumero(6.5);
 function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
-  var Arriba= math.ceil(num);
+  var Arriba= Math.ceil(num);
   return Arriba
 }
 redondearHaciaArriba(6.3);
@@ -183,8 +182,8 @@ redondearHaciaArriba(6.3);
 function numeroRandom() {
   //Generar un número al azar entre 0 y 1 y devolverlo
   //Pista: investigá qué hace el método Math.random()
-  var Random= math.random 
-  return Random
+  return Math.random();  
+  
 }
 numeroRandom();
 
@@ -193,43 +192,43 @@ function esPositivo(numero) {
   //Si el número es positivo, devolver ---> "Es positivo"
   //Si el número es negativo, devolver ---> "Es negativo"
   //Si el número es 0, devuelve false
-str1= 'es positivo';
-str2= 'es negativo';
+str1= 'Es positivo';
+str2= 'Es negativo';
 if (numero>0){
   return str1
 }
-return str2
-}
-if (numero==0){
+else  if(numero==0) {
   return false
+}
+return str2
 }
 
 function agregarSimboloExclamacion(str) {
   // Agrega un símbolo de exclamación al final de la string "str" y devuelve una nueva string
   // Ejemplo: "hello world" pasaría a ser "hello world!"
   // Tu código:
-var suma= (str+'!');
-return suma
+  return str + '!';
+ 
 
 }
-agregarSimboloExclamacion(hola);
+agregarSimboloExclamacion('hola');
 function combinarNombres(nombre, apellido) {
   // Devuelve "nombre" y "apellido" combinados en una string y separados por un espacio.
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
-  var suma =(nombre+apellido);
+  var suma =(nombre+' '+apellido);
 return suma
 }
-combinarNombres(franco,arce);
+combinarNombres('franco','arce');
 
 function obtenerSaludo(nombre) {
   // Toma la string "nombre" y concatena otras string en la cadena para que tome la siguiente forma:
   // "Martin" -> "Hola Martin!"
   // Tu código:
-  var suma= ('hola'+nombre+'!');
-  return suma
+   return 'Hola '+nombre+'!';
+  
 }
-obtenerSaludo(Franco)
+obtenerSaludo('Franco')
 
 function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
@@ -250,7 +249,7 @@ retornarPerimetro(2)
 function areaDelTriangulo(base, altura){
   //Desarrolle una función que calcule el área de un triángulo.
   //Escribe tu código aquí
-var Area =(base*altura);
+var Area =(base*altura)/2;
 return Area
 }
 areaDelTriangulo(3,5);
@@ -259,7 +258,7 @@ function deEuroAdolar(euro){
   //Supongamos que 1 euro equivale a 1.20 dólares. Escribe un programa que reciba
   //como parámetro un número de euros y calcule el cambio en dólares.
   //Escribe tu código aquí
-  var Equivalencia=(euro/0.8333333);
+  var Equivalencia=Math.floor(euro/0.83);
   return Equivalencia
 }
 deEuroAdolar(2);
@@ -270,17 +269,16 @@ function esVocal(letra){
   //que no se puede procesar el dato mediante el mensaje "Dato incorrecto".
   // Si no es vocal, tambien debe devolver "Dato incorrecto".
   //Escribe tu código aquí
-  str1='Es vocal';
-  str2='Dato Incorrecto'
-  if (letra=='a','e','i','o','u'){
-    return str1
+  if (letra.lenght>1){
+    return 'Dato incorrecto'
   }
-  return str2
+  if (letra=='a'||letra=='e'||letra=='i'||letra=='o'||letra=='u'){
+    return 'Es vocal'
+  }
+  
+return 'Dato incorrecto'
 }
-if (letra.lenght>1){
-  return str2
-}
-
+esVocal('ah');
 
 
 // No modificar nada debajo de esta línea
