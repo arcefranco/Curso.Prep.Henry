@@ -1,0 +1,22 @@
+html {
+    background-color:grey;
+}
+img{
+    height: 100px;
+    width: 100px;
+}
+h1 {
+    color: lightcoral;
+}
+#thirdDiv {
+    height: 600px;
+    width: 500px;
+    background-color: lightblue;
+    padding: 50px;
+    border-width: 600px;
+    border-color: lightcoral;
+}
+#spanId{
+    font-size: 18px;
+    margin: 50px;
+}
